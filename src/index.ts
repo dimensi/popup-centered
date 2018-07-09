@@ -8,12 +8,7 @@ import {
 } from './utils'
 
 function PopupCentered (url: string, title: string, widthOrOptions: number, height?: string): Window
-function PopupCentered (
-  url: string,
-  title: string,
-  widthOrOptions: number | WindowFeaturesOptions,
-  height?
-): Window {
+function PopupCentered (url: string,title: string,widthOrOptions: number | WindowFeaturesOptions,height?): Window {
   const { screenLeft, screenTop } = getScreenPosition()
   const { windowWidth, windowHeight } = getSizeWindow()
 

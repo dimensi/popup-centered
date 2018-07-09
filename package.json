@@ -6,6 +6,7 @@
   "module": "dist/popup-centered.es.js",
   "unpkg": "dist/popup-centered.iife.min.js",
   "jsdelivr": "dist/popup-centered.iife.min.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "build": "bili",
     "release": "standard-version -a"
