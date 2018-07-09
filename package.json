@@ -1,6 +1,6 @@
 {
   "name": "popup-centered",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "The little function for open window popup on center display",
   "main": "dist/popup-centered.js",
   "module": "dist/popup-centered.es.js",
@@ -8,7 +8,12 @@
   "jsdelivr": "dist/popup-centered.iife.min.js",
   "scripts": {
     "build": "bili",
-    "release": "standard-version"
+    "release": "standard-version --commit-all"
+  },
+  "standard-version": {
+    "scripts": {
+      "postbump": "npm run build"
+    }
   },
   "files": [
     "dist"
