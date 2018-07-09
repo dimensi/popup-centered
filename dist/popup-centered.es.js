@@ -1,5 +1,5 @@
 /*!
- * popup-centered v1.0.0
+ * popup-centered v1.0.4
  * (c) 2018-present Nikita Nafranets <eddimensi@gmail.com>
  * Released under the MIT License.
  */
