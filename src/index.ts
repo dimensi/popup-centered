@@ -7,23 +7,30 @@ import {
   WindowFeaturesOptions
 } from './utils'
 
-function popupCentered (url: string,title: string, widthOrOptions: number | WindowFeaturesOptions,height?): Window {
-  const { screenLeft, screenTop } = getScreenPosition()
-  const { windowWidth, windowHeight } = getSizeWindow()
+function popupCentered (url: string,title: string, width: number, height?): Window
+function popupCentered (url: string,title: string, options: WindowFeaturesOptions): Window
+function popupCentered(
+  url: string,
+  title: string,
+  widthOrOptions: number | WindowFeaturesOptions,
+  height?
+): Window {
+  const { screenLeft, screenTop } = getScreenPosition();
+  const { windowWidth, windowHeight } = getSizeWindow();
 
-  let options: WindowFeatures = null
+  let options: WindowFeatures = null;
 
-  if (typeof widthOrOptions === 'number' && typeof height === 'number') {
+  if (typeof widthOrOptions === "number" && typeof height === "number") {
     options = createOptions({
       width: widthOrOptions,
       height,
       left: calcPosition(windowWidth, widthOrOptions, screenLeft),
       top: calcPosition(windowHeight, height, screenTop),
       scrollbars: true
-    })
+    });
   }
 
-  if (typeof widthOrOptions === 'object') {
+  if (typeof widthOrOptions === "object") {
     options = createOptions(
       Object.assign(
         {},
@@ -33,15 +40,15 @@ function popupCentered (url: string,title: string, widthOrOptions: number | Wind
         },
         widthOrOptions
       )
-    )
+    );
   }
 
-  const newWindow = window.open(url, title, options.toString())
+  const newWindow = window.open(url, title, options.toString());
   if (window.focus) {
-    newWindow.focus()
+    newWindow.focus();
   }
 
-  return newWindow
+  return newWindow;
 }
 
 export default popupCentered

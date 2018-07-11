@@ -6,7 +6,7 @@
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports) :
   typeof define === 'function' && define.amd ? define(['exports'], factory) :
-  (factory((global.PopupCentered = {})));
+  (factory((global.popupCentered = {})));
 }(this, (function (exports) { 'use strict';
 
   const StringBoolean = (bool) => bool ? 'yes' : 'no';
@@ -59,7 +59,7 @@
       const { screenLeft, screenTop } = getScreenPosition();
       const { windowWidth, windowHeight } = getSizeWindow();
       let options = null;
-      if (typeof widthOrOptions === 'number' && typeof height === 'number') {
+      if (typeof widthOrOptions === "number" && typeof height === "number") {
           options = createOptions({
               width: widthOrOptions,
               height,
@@ -68,7 +68,7 @@
               scrollbars: true
           });
       }
-      if (typeof widthOrOptions === 'object') {
+      if (typeof widthOrOptions === "object") {
           options = createOptions(Object.assign({}, {
               left: calcPosition(windowWidth, widthOrOptions.width, screenLeft),
               top: calcPosition(windowHeight, widthOrOptions.height, screenTop)

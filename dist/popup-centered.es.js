@@ -53,7 +53,7 @@ function popupCentered(url, title, widthOrOptions, height) {
     const { screenLeft, screenTop } = getScreenPosition();
     const { windowWidth, windowHeight } = getSizeWindow();
     let options = null;
-    if (typeof widthOrOptions === 'number' && typeof height === 'number') {
+    if (typeof widthOrOptions === "number" && typeof height === "number") {
         options = createOptions({
             width: widthOrOptions,
             height,
@@ -62,7 +62,7 @@ function popupCentered(url, title, widthOrOptions, height) {
             scrollbars: true
         });
     }
-    if (typeof widthOrOptions === 'object') {
+    if (typeof widthOrOptions === "object") {
         options = createOptions(Object.assign({}, {
             left: calcPosition(windowWidth, widthOrOptions.width, screenLeft),
             top: calcPosition(windowHeight, widthOrOptions.height, screenTop)
