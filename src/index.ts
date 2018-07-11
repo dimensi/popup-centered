@@ -7,7 +7,7 @@ import {
   WindowFeaturesOptions
 } from './utils'
 
-function popupCentered (url: string,title: string, width: number, height?): Window
+function popupCentered (url: string,title: string, width: number, height: number): Window
 function popupCentered (url: string,title: string, options: WindowFeaturesOptions): Window
 function popupCentered(
   url: string,
