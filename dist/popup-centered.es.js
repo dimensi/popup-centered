@@ -1,5 +1,5 @@
 /*!
- * popup-centered v1.0.6
+ * popup-centered v1.0.7
  * (c) 2018-present Nikita Nafranets <eddimensi@gmail.com>
  * Released under the MIT License.
  */
@@ -49,7 +49,7 @@ const getSizeWindow = () => {
 };
 const calcPosition = (windowSize, popupSize, offset) => ((windowSize / 2) - (popupSize / 2)) + offset;
 
-function PopupCentered(url, title, widthOrOptions, height) {
+function popupCentered(url, title, widthOrOptions, height) {
     const { screenLeft, screenTop } = getScreenPosition();
     const { windowWidth, windowHeight } = getSizeWindow();
     let options = null;
@@ -75,4 +75,4 @@ function PopupCentered(url, title, widthOrOptions, height) {
     return newWindow;
 }
 
-export default PopupCentered;
+export default popupCentered;

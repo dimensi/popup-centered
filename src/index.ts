@@ -7,7 +7,7 @@ import {
   WindowFeaturesOptions
 } from './utils'
 
-function PopupCentered (url: string,title: string, widthOrOptions: number | WindowFeaturesOptions,height?): Window {
+function popupCentered (url: string,title: string, widthOrOptions: number | WindowFeaturesOptions,height?): Window {
   const { screenLeft, screenTop } = getScreenPosition()
   const { windowWidth, windowHeight } = getSizeWindow()
 
@@ -44,4 +44,4 @@ function PopupCentered (url: string,title: string, widthOrOptions: number | Wind
   return newWindow
 }
 
-export default PopupCentered
+export default popupCentered

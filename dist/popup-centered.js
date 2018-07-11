@@ -1,5 +1,5 @@
 /*!
- * popup-centered v1.0.6
+ * popup-centered v1.0.7
  * (c) 2018-present Nikita Nafranets <eddimensi@gmail.com>
  * Released under the MIT License.
  */
@@ -55,7 +55,7 @@
   };
   const calcPosition = (windowSize, popupSize, offset) => ((windowSize / 2) - (popupSize / 2)) + offset;
 
-  function PopupCentered(url, title, widthOrOptions, height) {
+  function popupCentered(url, title, widthOrOptions, height) {
       const { screenLeft, screenTop } = getScreenPosition();
       const { windowWidth, windowHeight } = getSizeWindow();
       let options = null;
@@ -81,7 +81,7 @@
       return newWindow;
   }
 
-  exports.default = PopupCentered;
+  exports.default = popupCentered;
 
   Object.defineProperty(exports, '__esModule', { value: true });
 
