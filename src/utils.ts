@@ -61,6 +61,8 @@ export interface WindowFeaturesOptions {
 
   /**
    * If this feature is on, then the new secondary window renders the Location bar in Mozilla-based browsers. MSIE 5+ and Opera 7.x renders the Address Bar.
+   * 
+   * **NOTE:** You cannot remove the address bar in modern browsers. That is a security measure. The user must always know what page they are on. Address bar also let user know, what type of security is on that page (HTTP or HTTPS).
    * @type {boolean}
    * @memberof WindowFeaturesOptions
    */
