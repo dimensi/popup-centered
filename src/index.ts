@@ -44,7 +44,7 @@ function popupCentered(
   }
 
   const newWindow = window.open(url, title, options.toString());
-  if (window.focus) {
+  if (window.focus && newWindow) {
     newWindow.focus();
   }
 
