@@ -8,6 +8,7 @@
       "es2016"
     ],
     "sourceMap": true,
+    "declarationDir": "./dist/"
   },
   "include": [
     "./src/**/*"

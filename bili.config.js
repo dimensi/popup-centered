@@ -1,12 +1,16 @@
-module.exports = {
+/** @type {import('bili').Config} */
+const config = {
   input: 'src/index.ts',
-  format: ['umd', 'es', 'iife-min'],
   banner: true,
-  moduleName: 'popupCentered',
-  plugin: [
-    require('rollup-plugin-clear')({
-      targets: ['./dist/']
-    }),
-  ],
-  exports: 'named'
+  output: {
+    moduleName: 'popupCentered',
+    format: ['cjs', 'es', 'iife-min'],
+  },
+  plugins: {
+    typescript2: {
+      useTsconfigDeclarationDir: true
+    }
+  }
 }
+
+export default config
