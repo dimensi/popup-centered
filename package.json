@@ -1,6 +1,6 @@
 {
   "name": "popup-centered",
-  "version": "1.1.6",
+  "version": "1.2.0",
   "description": "The little function for open window popup on center display",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
