@@ -52,3 +52,4 @@ function popupCentered(
 }
 
 export default popupCentered
+export { WindowFeaturesOptions }
